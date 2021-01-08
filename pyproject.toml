@@ -1,15 +1,23 @@
 [tool.poetry]
 name = "pkginfo"
-version = "0.1.0"
+version = "1.0.0"
 description = ""
 authors = ["Gerson Gallo <ggallovalle@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
+click = "^7.1.2"
+tabulate = "^0.8.7"
+toml = "^0.10.2"
+glom = "^20.11.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
+black = {version = "^20.8b1", allow-prereleases = true}
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+pkginfo = 'pkginfo.cli:pkginfo'
